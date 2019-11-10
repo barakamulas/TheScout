@@ -31,9 +31,9 @@
             android:id="@+id/userNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTextIcons"
+            android:textColor="@color/myBrown"
             android:hint="@string/user_name"
-            android:textColorHint="@color/colorTextIcons"
+            android:textColorHint="@color/myBrown"
             android:importantForAutofill="no"
             android:inputType="text"/>
 
@@ -53,8 +53,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-            android:textColorHint="@color/colorTextIcons"
-            android:textColor="@color/colorTextIcons"
+            android:textColorHint="@color/myBrown"
+            android:textColor="@color/myBrown"
             android:importantForAutofill="no"
             android:inputType="textPassword"/>
 
