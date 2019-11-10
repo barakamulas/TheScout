@@ -13,7 +13,7 @@
         android:text="@string/login_tittle"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="80dp"
         android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@color/myBrown"/>
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="180dp"
         app:boxStrokeColor="@color/myBrown">
 
         <EditText
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="240dp"
         app:boxStrokeColor="@color/myBrown">
 
         <EditText
@@ -69,11 +69,21 @@
         android:width="270dp"
         android:padding="5dp"
         android:text="@string/login_login"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="220dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="340dp"
         android:background="@drawable/rounded_button"
         android:textColor="@color/colorTextIcons"
         android:textStyle="bold"
         android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/account_question_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:text="@string/don_t_have_an_account_sign_up"
+        android:textSize="16sp" />
 
 </RelativeLayout>

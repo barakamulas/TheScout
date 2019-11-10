@@ -11,7 +11,7 @@
         android:text="@string/sign_up"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="80dp"
         android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@color/myBrown"/>
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="180dp"
         app:boxStrokeColor="@color/myBrown">
 
         <EditText
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="240dp"
         app:boxStrokeColor="@color/myBrown">
 
         <EditText
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="300dp"
         app:boxStrokeColor="@color/myBrown">
 
         <EditText
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="360dp"
         app:boxStrokeColor="@color/myBrown">
 
         <EditText
@@ -109,11 +109,21 @@
         android:width="270dp"
         android:padding="5dp"
         android:text="@string/sign_up"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="460dp"
         android:background="@drawable/rounded_button"
         android:textColor="@color/colorTextIcons"
         android:textStyle="bold"
         android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/account_question_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="520dp"
+        android:text="@string/already_have_an_account_log_in"
+        android:textSize="16sp" />
 
 </RelativeLayout>
