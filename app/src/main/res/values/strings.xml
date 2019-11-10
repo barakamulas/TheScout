@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">The Scout</string>
     <string name="the_scout">The Scout</string>
+    <string name="login">Login</string>
 </resources>
