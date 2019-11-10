@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView mAskSignUp = findViewById(R.id.account_question_main);
         String text = "Don't have an account? Sign Up";
-        SpannableString ss = new SpannableString(text);
+        SpannableString spannableString = new SpannableString(text);
 
         ClickableSpan clickableSpan = new ClickableSpan() {
             @Override
@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        ss.setSpan(clickableSpan,23,30,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        mAskSignUp.setText(ss);
+        spannableString.setSpan(clickableSpan,23,30,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        mAskSignUp.setText(spannableString);
         mAskSignUp.setMovementMethod(LinkMovementMethod.getInstance());
 
     }
