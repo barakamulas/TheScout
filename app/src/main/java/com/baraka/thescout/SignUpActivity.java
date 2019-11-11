@@ -23,7 +23,7 @@ public class SignUpActivity extends AppCompatActivity {
     @BindView(R.id.account_question_sign_up) TextView mSignUpAccountQuestion;
     @BindView(R.id.userNameEditText)EditText mUserNameEditText;
     @BindView(R.id.email)EditText mEmailEditText;
-    @BindView(R.id.userPassword)EditText mUserPassword;
+    @BindView(R.id.password)EditText mPassword;
     @BindView(R.id.confirm_password)EditText mConfirmPasswordEditText;
     @BindView(R.id.sign_up_button) Button mSignUpButton;
 
