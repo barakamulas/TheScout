@@ -43,5 +43,14 @@ public class LoginActivity extends AppCompatActivity {
         spannableString.setSpan(clickableSpan,23,30, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         mAccountQuestionLogin.setText(spannableString);
         mAccountQuestionLogin.setMovementMethod(LinkMovementMethod.getInstance());
+
+        mLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(LoginActivity.this,"Log In",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, Dashboard.class);
+                startActivity(intent);
+            }
+        });
     }
 }
