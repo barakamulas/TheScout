@@ -49,5 +49,14 @@ public class SignUpActivity extends AppCompatActivity {
         mSignUpAccountQuestion.setText(spannableString);
         mSignUpAccountQuestion.setMovementMethod(LinkMovementMethod.getInstance());
 
+        mSignUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(SignUpActivity.this,"Welcome",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(SignUpActivity.this, Dashboard.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

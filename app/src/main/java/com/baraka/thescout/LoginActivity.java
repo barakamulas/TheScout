@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LoginActivity.this,"Log In",Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this,"Welcome",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(LoginActivity.this, Dashboard.class);
                 startActivity(intent);
             }
