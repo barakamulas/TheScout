@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(@NonNull View widget) {
                 Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
-                Toast.makeText(LoginActivity.this,"Sign Up Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this,"Sign Up", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         };
