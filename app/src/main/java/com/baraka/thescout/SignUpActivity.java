@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.View;
@@ -52,9 +53,29 @@ public class SignUpActivity extends AppCompatActivity {
         mSignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SignUpActivity.this,"Welcome",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(SignUpActivity.this, Dashboard.class);
-                startActivity(intent);
+                String user = mUserNameEditText.getText().toString();
+                String password = mPassword.getText().toString();
+                String email = mEmailEditText.getText().toString();
+                String confirmPassword = mConfirmPasswordEditText.getText().toString();
+
+                if(TextUtils.isEmpty(user)){
+                    Toast.makeText(SignUpActivity.this,"User Name Required",Toast.LENGTH_SHORT).show();
+                }else if(TextUtils.isEmpty(email)){
+                    Toast.makeText(SignUpActivity.this,"Email Required",Toast.LENGTH_SHORT).show();
+                }else if(TextUtils.isEmpty(password)){
+                    Toast.makeText(SignUpActivity.this,"Password Required",Toast.LENGTH_SHORT).show();
+                }else if(TextUtils.isEmpty(confirmPassword)){
+                    Toast.makeText(SignUpActivity.this,"Please Confirm Your Password",Toast.LENGTH_SHORT).show();
+                }else if(!password.equals(confirmPassword)){
+                    Toast.makeText(SignUpActivity.this,"Make Sure Your Passwords Match",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(SignUpActivity.this,"Welcome",Toast.LENGTH_SHORT).show();
+                    Intent intentSignUp = new Intent(SignUpActivity.this, Dashboard.class);
+//                    intentSignUp.putExtra("user",user);
+//                    intentSignUp.putExtra("email", email);
+                    startActivity(intentSignUp);
+                }
+
             }
         });
 
