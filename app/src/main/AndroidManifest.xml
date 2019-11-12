@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".Players"></activity>
+        <activity android:name=".Players">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.baraka.thescout.Dashboard" />
+        </activity>
         <activity
             android:name=".Dashboard"
             android:theme="@style/AppTheme.NoActionBar" />

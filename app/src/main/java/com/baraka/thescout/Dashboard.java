@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
+
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -21,8 +23,8 @@ import butterknife.ButterKnife;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-//    @BindView(R.id.userTextView)TextView mUserTextView;
-//    @BindView(R.id.emailTextView)TextView mEmailTextView;
+    private TextView mUserTextView;
+    private TextView mEmailTextView;
 
     private Button mPlayersButton;
 
@@ -32,7 +34,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-//        ButterKnife.bind(this);
+
 
         mPlayersButton = (Button) findViewById(R.id.playersButton);
 
@@ -41,6 +43,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
         navigationView.setNavigationItemSelectedListener(this);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
@@ -50,11 +53,13 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         Intent intent = getIntent();
         String user = intent.getStringExtra("user");
-//        String email = intent.getStringExtra("email");
-
-//        mEmailTextView.setText(email);
-//        mUserTextView.setText(user);
-
+        String email = intent.getStringExtra("email");
+        Toast.makeText(Dashboard.this,user, Toast.LENGTH_SHORT).show();
+        View headerView = navigationView.getHeaderView(0);
+        mUserTextView = (TextView) headerView.findViewById(R.id.userTextView); // how you get a view on the header of navigation drawer
+        mEmailTextView = (TextView) headerView.findViewById(R.id.emailTextView);
+        mUserTextView.setText(user);
+        mEmailTextView.setText(email);
 
 
         if (savedInstanceState == null) {

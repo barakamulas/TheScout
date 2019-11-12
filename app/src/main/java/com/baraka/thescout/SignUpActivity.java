@@ -19,7 +19,7 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SignUpActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity{
 
     @BindView(R.id.account_question_sign_up) TextView mSignUpAccountQuestion;
     @BindView(R.id.userNameEditText)EditText mUserNameEditText;
@@ -50,6 +50,7 @@ public class SignUpActivity extends AppCompatActivity {
         mSignUpAccountQuestion.setText(spannableString);
         mSignUpAccountQuestion.setMovementMethod(LinkMovementMethod.getInstance());
 
+
         mSignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,8 +72,8 @@ public class SignUpActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(SignUpActivity.this,"Welcome",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(SignUpActivity.this, Dashboard.class);
-//                    intentSignUp.putExtra("user",user);
-//                    intentSignUp.putExtra("email", email);
+                    intent.putExtra("user",user);
+                    intent.putExtra("email",email);
                     startActivity(intent);
                 }
 
