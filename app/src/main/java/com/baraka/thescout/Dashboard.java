@@ -54,7 +54,6 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         Intent intent = getIntent();
         String user = intent.getStringExtra("user");
         String email = intent.getStringExtra("email");
-        Toast.makeText(Dashboard.this,user, Toast.LENGTH_SHORT).show();
         View headerView = navigationView.getHeaderView(0);
         mUserTextView = (TextView) headerView.findViewById(R.id.userTextView); // how you get a view on the header of navigation drawer
         mEmailTextView = (TextView) headerView.findViewById(R.id.emailTextView);
@@ -97,8 +96,6 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new NotificationsFragment()).commit();
                 break;
-
-
         }
 
         drawer.closeDrawer(GravityCompat.START);
