@@ -19,8 +19,8 @@ import butterknife.ButterKnife;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    @BindView(R.id.userTextView)TextView mUserTextView;
-    @BindView(R.id.emailTextView)TextView mEmailTextView;
+//    @BindView(R.id.userTextView)TextView mUserTextView;
+//    @BindView(R.id.emailTextView)TextView mEmailTextView;
 
     private DrawerLayout drawer;
 
@@ -28,7 +28,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        ButterKnife.bind(this);
+//        ButterKnife.bind(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
