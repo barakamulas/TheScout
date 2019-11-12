@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(@NonNull View widget) {
                 Intent intent = new Intent(MainActivity.this,SignUpActivity.class);
-                Toast.makeText(MainActivity.this,"Sign Up", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         };
@@ -50,7 +49,6 @@ public class MainActivity extends AppCompatActivity{
         mMainLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Log In",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
