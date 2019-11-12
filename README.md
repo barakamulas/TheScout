@@ -6,6 +6,10 @@ An android app for scouting soccer players in Kenya
 
 Frankline Baraka Mulama
 
+## Screenshot of the main activity
+
+![](screenshot.png)
+
 ## Link to the repository on GitHub
 
 https://github.com/barakamulas/TheScout

@@ -67,7 +67,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     public void buttonClick(View v) {
         switch(v.getId()) {
             case R.id.playersButton:
-                Intent myIntent = new Intent(Dashboard.this,Players.class);
+                Intent myIntent = new Intent(Dashboard.this,Players.class); //Click Listener on a button on a Fragment
                 startActivity(myIntent);
                 break;
         }
