@@ -27,4 +27,6 @@
     <string name="home_fragment">Home Fragment</string>
     <string name="notifications_fragment">Notifications Fragment</string>
     <string name="profile_fragment">Profile Fragment</string>
+    <string name="view_players">View Players</string>
+    <string name="available_players">Available Players</string>
 </resources>

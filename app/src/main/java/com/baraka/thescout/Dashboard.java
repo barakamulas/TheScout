@@ -11,6 +11,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 //    @BindView(R.id.userTextView)TextView mUserTextView;
 //    @BindView(R.id.emailTextView)TextView mEmailTextView;
 
+    private Button mPlayersButton;
+
     private DrawerLayout drawer;
 
     @Override
@@ -29,6 +33,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 //        ButterKnife.bind(this);
+
+        mPlayersButton = (Button) findViewById(R.id.playersButton);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -50,10 +56,20 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 //        mUserTextView.setText(user);
 
 
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
+        }
+    }
+
+    public void buttonClick(View v) {
+        switch(v.getId()) {
+            case R.id.playersButton:
+                Intent myIntent = new Intent(Dashboard.this,Players.class);
+                startActivity(myIntent);
+                break;
         }
     }
 
@@ -76,6 +92,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new NotificationsFragment()).commit();
                 break;
+
 
         }
 
