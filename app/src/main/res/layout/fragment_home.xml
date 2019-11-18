@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="50dp"
-        android:text="@string/view_players"
+        android:text="@string/view_teams"
         android:background="@drawable/rounded_button"/>
 
 

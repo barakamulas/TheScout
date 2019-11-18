@@ -72,7 +72,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     public void buttonClick(View v) {
         switch(v.getId()) {
             case R.id.playersButton:
-                Intent myIntent = new Intent(DashboardActivity.this, PlayersActivity.class); //Click Listener on a button on a Fragment
+                Intent myIntent = new Intent(DashboardActivity.this, CompetitionActivity.class); //Click Listener on a button on a Fragment
                 startActivity(myIntent);
                 break;
         }

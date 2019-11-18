@@ -30,4 +30,6 @@
     <string name="view_players">View Players</string>
     <string name="available_players">Available Players</string>
     <string name="teams">Teams</string>
+    <string name="team_name">Team Name</string>
+    <string name="view_teams">View Teams</string>
 </resources>
