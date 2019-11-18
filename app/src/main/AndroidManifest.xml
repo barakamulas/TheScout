@@ -9,22 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".Players">
+        <activity android:name=".ui.Players">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.baraka.thescout.Dashboard" />
+                android:value="com.baraka.thescout.ui.Dashboard" />
         </activity>
         <activity
-            android:name=".Dashboard"
+            android:name=".ui.Dashboard"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".ui.SignUpActivity"
             android:theme="@style/NoActionBarTheme" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.LoginActivity"
             android:theme="@style/NoActionBarTheme" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

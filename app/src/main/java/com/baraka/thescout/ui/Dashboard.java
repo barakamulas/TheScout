@@ -1,6 +1,12 @@
-package com.baraka.thescout;
+package com.baraka.thescout.ui;
 
 import androidx.annotation.NonNull;
+
+import com.baraka.thescout.HomeFragment;
+import com.baraka.thescout.NotificationsFragment;
+import com.baraka.thescout.ProfileFragment;
+import com.baraka.thescout.R;
+import com.baraka.thescout.SettingsFragment;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -11,15 +17,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 
-import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
