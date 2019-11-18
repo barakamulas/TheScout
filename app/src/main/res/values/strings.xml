@@ -29,4 +29,5 @@
     <string name="profile_fragment">Profile Fragment</string>
     <string name="view_players">View Players</string>
     <string name="available_players">Available Players</string>
+    <string name="teams">Teams</string>
 </resources>

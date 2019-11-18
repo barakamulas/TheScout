@@ -76,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
                         int index = userList.indexOf(user);
                         if(passwordList.get(index).equals(password)){
                             Toast.makeText(LoginActivity.this,"Welcome",Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(LoginActivity.this, Dashboard.class);
+                            Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                             intent.putExtra("user",user);
                             intent.putExtra("email",emailList.get(index));
                             startActivity(intent);

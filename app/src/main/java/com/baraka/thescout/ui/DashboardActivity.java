@@ -22,7 +22,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private TextView mUserTextView;
     private TextView mEmailTextView;
@@ -72,7 +72,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     public void buttonClick(View v) {
         switch(v.getId()) {
             case R.id.playersButton:
-                Intent myIntent = new Intent(Dashboard.this,Players.class); //Click Listener on a button on a Fragment
+                Intent myIntent = new Intent(DashboardActivity.this, PlayersActivity.class); //Click Listener on a button on a Fragment
                 startActivity(myIntent);
                 break;
         }

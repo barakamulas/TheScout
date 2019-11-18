@@ -72,7 +72,7 @@ public class SignUpActivity extends AppCompatActivity{
                     Toast.makeText(SignUpActivity.this,"Make Sure Your Passwords Match",Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(SignUpActivity.this,"Welcome",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(SignUpActivity.this, Dashboard.class);
+                    Intent intent = new Intent(SignUpActivity.this, DashboardActivity.class);
                     intent.putExtra("user",user);
                     intent.putExtra("email",email);
                     startActivity(intent);
