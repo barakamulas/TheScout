@@ -14,12 +14,15 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -27,7 +30,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     private TextView mUserTextView;
     private TextView mEmailTextView;
 
-    private Button mPlayersButton;
+    private ImageButton mPlayersButton;
 
     private DrawerLayout drawer;
 
@@ -37,7 +40,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         setContentView(R.layout.activity_dashboard);
 
 
-        mPlayersButton = (Button) findViewById(R.id.playersBtn);
+        mPlayersButton = (ImageButton) findViewById(R.id.playersBtn);
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -75,6 +78,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             case R.id.playersBtn:
                 Intent myIntent = new Intent(DashboardActivity.this, CompetitionActivity.class); //Click Listener on a button on a Fragment
                 startActivity(myIntent);
+                break;
+            case R.id.profile_pic:
+                Intent cameraIntent = new Intent();
+                cameraIntent.setAction(android.content.Intent.ACTION_VIEW);
+                cameraIntent.setType("image/*");
+                cameraIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(cameraIntent);
                 break;
         }
     }
