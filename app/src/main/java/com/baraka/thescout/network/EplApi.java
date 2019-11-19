@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 
 public interface EplApi {
 
-    @GET("competitions/2012/teams")
+    @GET("competitions/2019/teams")
     Call<EplResponse> getTeams(
     );
 }

@@ -32,4 +32,6 @@
     <string name="teams">Teams</string>
     <string name="team_name">Team Name</string>
     <string name="view_teams">View Teams</string>
+    <string name="team_logo">Team Logo</string>
+    <string name="info_icon">info icon</string>
 </resources>
