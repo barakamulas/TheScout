@@ -37,7 +37,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         setContentView(R.layout.activity_dashboard);
 
 
-        mPlayersButton = (Button) findViewById(R.id.playersButton);
+        mPlayersButton = (Button) findViewById(R.id.playersBtn);
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -71,7 +72,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
     public void buttonClick(View v) {
         switch(v.getId()) {
-            case R.id.playersButton:
+            case R.id.playersBtn:
                 Intent myIntent = new Intent(DashboardActivity.this, CompetitionActivity.class); //Click Listener on a button on a Fragment
                 startActivity(myIntent);
                 break;

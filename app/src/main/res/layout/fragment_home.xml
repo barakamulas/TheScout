@@ -3,19 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/playersButton"
+    <ImageButton
+        android:src="@drawable/prem3"
+        android:id="@+id/playersBtn"
         android:onClick="buttonClick"
-        android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
         android:textColor="@color/colorTextIcons"
-        android:width="200dp"
-        android:height="30dp"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="50dp"
-        android:text="@string/view_teams"
-        android:background="@drawable/rounded_button"/>
-
+        android:text="@string/view_teams"/>
 
 </RelativeLayout>

@@ -6,8 +6,8 @@
     android:layout_margin="5dp">
 
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:id="@+id/teamImageView"
         android:src="@drawable/university"
         android:scaleType="centerCrop"/>
