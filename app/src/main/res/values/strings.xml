@@ -34,4 +34,12 @@
     <string name="view_teams">View Teams</string>
     <string name="team_logo">Team Logo</string>
     <string name="info_icon">info icon</string>
+    <string name="title_activity_epl_stats">EplStatsActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="standings">Standings</string>
+    <string name="top_scorers">Top Scorers</string>
+    <string name="standings_fragment">Standings Fragment</string>
+    <string name="scorers_fragment">Scorers Fragment</string>
+    <string name="teams_fragment">Teams Fragment</string>
 </resources>
