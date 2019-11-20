@@ -21,6 +21,7 @@
             android:scaleType="centerCrop"
             android:contentDescription="@string/team_logo" />
 
+
     </RelativeLayout>
 
 

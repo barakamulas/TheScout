@@ -7,6 +7,7 @@ import com.baraka.thescout.NotificationsFragment;
 import com.baraka.thescout.ProfileFragment;
 import com.baraka.thescout.R;
 import com.baraka.thescout.SettingsFragment;
+import com.baraka.thescout.models.Competition;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -30,39 +31,46 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     private TextView mUserTextView;
     private TextView mEmailTextView;
 
-    private ImageButton mPlayersButton;
+
 
     private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_dashboard);
 
-
-        mPlayersButton = (ImageButton) findViewById(R.id.playersBtn);
-
-
         Toolbar toolbar = findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
 
         drawer = findViewById(R.id.drawer_layout);
+
         NavigationView navigationView = findViewById(R.id.nav_view);
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+
         drawer.addDrawerListener(toggle);
+
         toggle.syncState();
 
         Intent intent = getIntent();
+
         String user = intent.getStringExtra("user");
+
         String email = intent.getStringExtra("email");
+
         View headerView = navigationView.getHeaderView(0);
+
         mUserTextView = (TextView) headerView.findViewById(R.id.userTextView); // how you get a view on the header of navigation drawer
+
         mEmailTextView = (TextView) headerView.findViewById(R.id.emailTextView);
+
         mUserTextView.setText(user);
+
         mEmailTextView.setText(email);
 
 
@@ -76,7 +84,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     public void buttonClick(View v) {
         switch(v.getId()) {
             case R.id.playersBtn:
-                Intent myIntent = new Intent(DashboardActivity.this, CompetitionActivity.class); //Click Listener on a button on a Fragment
+                Intent myIntent = new Intent(DashboardActivity.this, EplStatsActivity.class); //Click Listener on a button on a Fragment
                 startActivity(myIntent);
                 break;
             case R.id.profile_pic:
@@ -121,6 +129,5 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         } else {
             super.onBackPressed();
         }
-
     }
 }

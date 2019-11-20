@@ -61,8 +61,8 @@ public class TeamsListAdapter extends RecyclerView.Adapter<TeamsListAdapter.Team
         public void bindteam(Team team) {
             Picasso.get().load(team.getCrestUrl()).into(mTeamImageView);
             mNameTextView.setText(team.getName());
-//                mCategoryTextView.setText(team.getCategories().get(0).getTitle());
-//                mRatingTextView.setText("Rating: " + team.getRating() + "/5");
+
+
         }
     }
 }
