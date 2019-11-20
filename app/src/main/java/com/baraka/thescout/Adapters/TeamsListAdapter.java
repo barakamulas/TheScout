@@ -1,4 +1,4 @@
-package com.baraka.thescout;
+package com.baraka.thescout.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.baraka.thescout.R;
 import com.baraka.thescout.models.Team;
 import com.squareup.picasso.Picasso;
 
@@ -22,9 +23,9 @@ public class TeamsListAdapter extends RecyclerView.Adapter<TeamsListAdapter.Team
     private List<Team> mTeams;
     private Context mContext;
 
-    public TeamsListAdapter(Context context, List<Team> restaurants) {
+    public TeamsListAdapter(Context context, List<Team> teams) {
         mContext = context;
-        mTeams = restaurants;
+        mTeams = teams;
 
 
         }

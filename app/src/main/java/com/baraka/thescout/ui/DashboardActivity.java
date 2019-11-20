@@ -2,12 +2,11 @@ package com.baraka.thescout.ui;
 
 import androidx.annotation.NonNull;
 
-import com.baraka.thescout.HomeFragment;
-import com.baraka.thescout.NotificationsFragment;
-import com.baraka.thescout.ProfileFragment;
+import com.baraka.thescout.Fragments.HomeFragment;
+import com.baraka.thescout.Fragments.NotificationsFragment;
+import com.baraka.thescout.Fragments.ProfileFragment;
 import com.baraka.thescout.R;
-import com.baraka.thescout.SettingsFragment;
-import com.baraka.thescout.models.Competition;
+import com.baraka.thescout.Fragments.SettingsFragment;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -15,15 +14,12 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {

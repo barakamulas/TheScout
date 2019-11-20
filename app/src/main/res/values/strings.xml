@@ -42,4 +42,7 @@
     <string name="standings_fragment">Standings Fragment</string>
     <string name="scorers_fragment">Scorers Fragment</string>
     <string name="teams_fragment">Teams Fragment</string>
+    <string name="scorer_name">Scorer Name</string>
+    <string name="goals_scored">Goals Scored</string>
+
 </resources>

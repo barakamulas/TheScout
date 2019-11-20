@@ -1,4 +1,4 @@
-package com.baraka.thescout;
+package com.baraka.thescout.Fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.baraka.thescout.R;
+import com.baraka.thescout.Adapters.TeamsListAdapter;
 import com.baraka.thescout.models.EplResponse;
 import com.baraka.thescout.models.Team;
 import com.baraka.thescout.network.EplApi;
@@ -22,8 +24,6 @@ import com.baraka.thescout.ui.EplStatsActivity;
 
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

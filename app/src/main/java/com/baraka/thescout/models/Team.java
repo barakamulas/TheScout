@@ -91,6 +91,12 @@ public class Team {
         this.lastUpdated = lastUpdated;
     }
 
+    public Team(Integer id, String name) {
+        super();
+        this.id = id;
+        this.name = name;
+    }
+
     public Integer getId() {
         return id;
     }
