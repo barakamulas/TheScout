@@ -21,7 +21,10 @@ import butterknife.ButterKnife;
 
 public class ScorersListAdapter extends RecyclerView.Adapter<ScorersListAdapter.ScorerViewHolder> {
 
+    public static int teamId;
+
     private List<Scorer> mScorers;
+
     private Context mContext;
 
     public ScorersListAdapter(Context context, List<Scorer> scorers) {
@@ -60,7 +63,10 @@ public class ScorersListAdapter extends RecyclerView.Adapter<ScorersListAdapter.
         }
 
         public void bindscorer(Scorer scorer) {
-            Picasso.get().load(scorer.getTeam().getCrestUrl()).into(mScorerTeamImageView);
+
+            teamId = scorer.getTeam().getId();
+//            Team team = scorer.getTeam();
+//            Picasso.get().load(team.getId()).into(mScorerTeamImageView);
             mScorerNameTextView.setText(scorer.getPlayer().getName());
             mGoalsTextView.setText(scorer.getNumberOfGoals().toString());
         }
