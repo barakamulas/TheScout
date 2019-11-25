@@ -1,4 +1,4 @@
-package com.baraka.thescout.Fragments;
+package com.baraka.thescout.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -14,15 +14,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.baraka.thescout.Adapters.ScorersListAdapter;
-import com.baraka.thescout.Adapters.TeamsListAdapter;
+import com.baraka.thescout.adapters.ScorersListAdapter;
 import com.baraka.thescout.R;
-import com.baraka.thescout.models.EplResponse;
 import com.baraka.thescout.models.EplScorersSearch;
 import com.baraka.thescout.models.Scorer;
-import com.baraka.thescout.models.Team;
-import com.baraka.thescout.network.EplApi;
-import com.baraka.thescout.network.EplClient;
 import com.baraka.thescout.network.EplTopScorersApi;
 import com.baraka.thescout.network.EplTopScorersClient;
 import com.baraka.thescout.ui.EplStatsActivity;

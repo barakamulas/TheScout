@@ -2,11 +2,11 @@ package com.baraka.thescout.ui;
 
 import androidx.annotation.NonNull;
 
-import com.baraka.thescout.Fragments.HomeFragment;
-import com.baraka.thescout.Fragments.NotificationsFragment;
-import com.baraka.thescout.Fragments.ProfileFragment;
+import com.baraka.thescout.fragments.HomeFragment;
+import com.baraka.thescout.fragments.NotificationsFragment;
+import com.baraka.thescout.fragments.ProfileFragment;
 import com.baraka.thescout.R;
-import com.baraka.thescout.Fragments.SettingsFragment;
+import com.baraka.thescout.fragments.SettingsFragment;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;

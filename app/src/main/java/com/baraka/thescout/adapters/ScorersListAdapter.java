@@ -1,4 +1,4 @@
-package com.baraka.thescout.Adapters;
+package com.baraka.thescout.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.baraka.thescout.R;
 import com.baraka.thescout.models.Scorer;
-import com.baraka.thescout.models.Team;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 

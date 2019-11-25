@@ -1,4 +1,4 @@
-package com.baraka.thescout.Fragments;
+package com.baraka.thescout.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.baraka.thescout.R;
-import com.baraka.thescout.Adapters.TeamsListAdapter;
+import com.baraka.thescout.adapters.TeamsListAdapter;
 import com.baraka.thescout.models.EplResponse;
 import com.baraka.thescout.models.Team;
 import com.baraka.thescout.network.EplApi;

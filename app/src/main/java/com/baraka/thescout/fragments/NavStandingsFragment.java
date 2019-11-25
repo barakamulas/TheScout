@@ -1,4 +1,4 @@
-package com.baraka.thescout.Fragments;
+package com.baraka.thescout.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,11 +10,12 @@ import androidx.fragment.app.Fragment;
 
 import com.baraka.thescout.R;
 
-public class SettingsFragment extends Fragment {
+public class NavStandingsFragment extends Fragment {
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_settings, container, false);
+        return inflater.inflate(R.layout.nav_standings_fragment, container, false);
     }
 }

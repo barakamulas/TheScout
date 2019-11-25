@@ -4,6 +4,10 @@ package com.baraka.thescout.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
+
+@Parcel
 public class Season {
 
     @SerializedName("id")
@@ -18,9 +22,9 @@ public class Season {
     @SerializedName("currentMatchday")
     @Expose
     private Integer currentMatchday;
-    @SerializedName("winner")
-    @Expose
-    private Object winner;
+//    @SerializedName("winner")
+//    @Expose
+//    private Object winner;
 
     /**
      * No args constructor for use in serialization
@@ -43,7 +47,7 @@ public class Season {
         this.startDate = startDate;
         this.endDate = endDate;
         this.currentMatchday = currentMatchday;
-        this.winner = winner;
+//        this.winner = winner;
     }
 
     public Integer getId() {
@@ -78,12 +82,12 @@ public class Season {
         this.currentMatchday = currentMatchday;
     }
 
-    public Object getWinner() {
-        return winner;
-    }
-
-    public void setWinner(Object winner) {
-        this.winner = winner;
-    }
+//    public Object getWinner() {
+//        return winner;
+//    }
+//
+//    public void setWinner(Object winner) {
+//        this.winner = winner;
+//    }
 
 }

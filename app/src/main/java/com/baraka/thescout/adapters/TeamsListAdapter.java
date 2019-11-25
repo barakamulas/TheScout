@@ -1,36 +1,23 @@
-package com.baraka.thescout.Adapters;
+package com.baraka.thescout.adapters;
 
 import android.content.Context;
-import android.graphics.drawable.PictureDrawable;
-import android.net.Uri;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
-
 import androidx.recyclerview.widget.RecyclerView;
-import android.content.ContentResolver;
-
 import com.baraka.thescout.R;
 import com.baraka.thescout.models.Team;
-import com.bumptech.glide.util.Preconditions;
+import com.baraka.thescout.ui.TeamDetailsActivity;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.RequestBuilder;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.model.StreamEncoder;
 import com.squareup.picasso.Picasso;
-import com.bumptech.glide.util.Preconditions;
-
-import java.io.InputStream;
+import org.parceler.Parcels;
 import java.util.List;
-import java.io.File;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.bumptech.glide.load.resource.bitmap.BitmapTransitionOptions.withCrossFade;
 
 public class TeamsListAdapter extends RecyclerView.Adapter<TeamsListAdapter.TeamViewHolder> {
 
@@ -63,29 +50,48 @@ public class TeamsListAdapter extends RecyclerView.Adapter<TeamsListAdapter.Team
     public int getItemCount() {
         return mTeams.size();
     }
-    public class TeamViewHolder extends RecyclerView.ViewHolder {
+
+    public class TeamViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         @BindView(R.id.teamImageView)ImageView mTeamImageView;
         @BindView(R.id.teamNameTextView)TextView mNameTextView;
+        @BindView(R.id.info) ImageView mInfo;
 
 
         private Context mContext;
+//        private Activity EplStatsActivity;
+
 
         public TeamViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
             mContext = itemView.getContext();
+            mInfo.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            int itemPosition = getLayoutPosition();
+            Intent intent = new Intent(mContext, TeamDetailsActivity.class);
+            intent.putExtra("position", itemPosition);
+            intent.putExtra("teams", Parcels.wrap(mTeams));
+            mContext.startActivity(intent);
         }
 
         public void bindteam(Team team) {
 
 
+//            GlideToVectorYou.justLoadImage((, Uri.parse(team.getCrestUrl()), mTeamImageView);
 
+
+
+//
 //            Glide
 //                    .with(mContext)
 //                    .load(team.getCrestUrl())
+//                    .error(R.drawable.university)//in case no image is loaded
 //                    .into(mTeamImageView);
 
-            Picasso.get().load(team.getCrestUrl()).into(mTeamImageView);
+            Picasso.get().load(team.getCrestUrl()).error(R.drawable.university).into(mTeamImageView);
             mNameTextView.setText(team.getName());
 
 

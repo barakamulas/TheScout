@@ -5,9 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
-import com.baraka.thescout.Fragments.NavHomeFragment;
-import com.baraka.thescout.Fragments.NavScorersFragment;
-import com.baraka.thescout.Fragments.NavStandingsFragment;
+import com.baraka.thescout.fragments.NavHomeFragment;
+import com.baraka.thescout.fragments.NavScorersFragment;
+import com.baraka.thescout.fragments.NavStandingsFragment;
 import com.baraka.thescout.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 

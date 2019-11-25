@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
+        <activity android:name=".ui.TeamDetailsActivity"></activity>
         <activity android:name=".ui.EplStatsActivity" />
         <activity
             android:name=".ui.DashboardActivity"
