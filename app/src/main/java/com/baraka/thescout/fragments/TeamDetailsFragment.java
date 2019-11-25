@@ -52,7 +52,7 @@ public class TeamDetailsFragment extends Fragment implements View.OnClickListene
         View view = inflater.inflate(R.layout.fragment_team_details, container, false);
         ButterKnife.bind(this, view);
 
-        Picasso.get().load(mTeam.getCrestUrl()).into(mImageLabel);
+        Picasso.get().load(mTeam.getCrestUrl()).error(R.drawable.university).into(mImageLabel);
 
 
         mWebsiteLabel.setText(mTeam.getWebsite());
@@ -81,6 +81,12 @@ public class TeamDetailsFragment extends Fragment implements View.OnClickListene
             Intent phoneIntent = new Intent(Intent.ACTION_DIAL,
                     Uri.parse("tel:" + mTeam.getPhone()));
             startActivity(phoneIntent);
+        }if(v == mEmailLabel){
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO,Uri.fromParts("mailto",mTeam.getEmail(),null));
+            emailIntent.putExtra(Intent.EXTRA_EMAIL,mTeam.getEmail());
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT,"");
+            startActivity(Intent.createChooser(emailIntent,"Choose an Email Client"));
+
         }
 //        if (v == mAddressLabel) {
 //            Intent mapIntent = new Intent(Intent.ACTION_VIEW,
