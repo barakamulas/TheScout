@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "804307724425",
+    "firebase_url": "https://the-scout-f7e1e.firebaseio.com",
+    "project_id": "the-scout-f7e1e",
+    "storage_bucket": "the-scout-f7e1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804307724425:android:2f50a56df53b95226c3e58",
+        "android_client_info": {
+          "package_name": "com.baraka.thescout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804307724425-p1nrpkodkeoqrnkustn0a8p50vp055rk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGADRO4new7Okl14Hz19ZMHUsJWtjnKQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804307724425-p1nrpkodkeoqrnkustn0a8p50vp055rk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
