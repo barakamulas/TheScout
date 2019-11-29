@@ -7,10 +7,16 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.baraka.thescout.Constants;
 import com.baraka.thescout.R;
 import com.baraka.thescout.models.Team;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 import org.parceler.Parcels;
 
@@ -25,12 +31,13 @@ public class TeamDetailsFragment extends Fragment implements View.OnClickListene
     @BindView(R.id.teamPhoneTextView) TextView mPhoneLabel;
     @BindView(R.id.teamAddressTextView) TextView mAddressLabel;
     @BindView(R.id.teamEmailTextView) TextView mEmailLabel;
+    @BindView(R.id.save_button)Button mSaveButton;
 
    
     private Team mTeam;
 
     public TeamDetailsFragment() {
-        // Required empty public constructor
+
     }
 
     public static TeamDetailsFragment newInstance(Team team) {
@@ -66,6 +73,7 @@ public class TeamDetailsFragment extends Fragment implements View.OnClickListene
         mWebsiteLabel.setOnClickListener(this);
         mPhoneLabel.setOnClickListener(this);
         mAddressLabel.setOnClickListener(this);
+        mSaveButton.setOnClickListener(this);
 
         return view;
     }
@@ -88,12 +96,12 @@ public class TeamDetailsFragment extends Fragment implements View.OnClickListene
             startActivity(Intent.createChooser(emailIntent,"Choose an Email Client"));
 
         }
-//        if (v == mAddressLabel) {
-//            Intent mapIntent = new Intent(Intent.ACTION_VIEW,
-//                    Uri.parse("geo:" + mTeam.getCoordinates().getLatitude()
-//                            + "," + mTeam.getCoordinates().getLongitude()
-//                            + "?q=(" + mTeam.getName() + ")"));
-//            startActivity(mapIntent);
-//        }
+        if (v == mSaveButton){
+            DatabaseReference teamRef = FirebaseDatabase
+                    .getInstance()
+                    .getReference(Constants.FIREBASE_CHILD_TEAMS);
+            teamRef.push().setValue(mTeam);
+            Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+        }
     }
 }

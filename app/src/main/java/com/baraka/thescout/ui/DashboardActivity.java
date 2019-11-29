@@ -113,6 +113,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 cameraIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(cameraIntent);
                 break;
+            case R.id.savedTeams:
+                Intent intent = new Intent(DashboardActivity.this, SavedTeamsActivity.class);
+                startActivity(intent);
         }
     }
 

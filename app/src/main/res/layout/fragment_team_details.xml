@@ -1,21 +1,22 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.baraka.thescout.ui.TeamDetailsActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/round_list"
+        android:layout_marginTop="20dp">
 
             <ImageView
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="10dp"
+                android:padding="20dp"
+                android:background="@drawable/rounded_resource"
+                android:layout_centerHorizontal="true"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:id="@+id/teamDetailsImageView"
@@ -32,86 +33,104 @@
                 android:text="@string/team_name"
                 android:id="@+id/teamDetailsNameTextView"
                 android:layout_below="@id/teamDetailsImageView"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="10dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:textSize="20sp"
                 android:textColor="@color/myBrown"
                 android:textStyle="bold" />
 
-
-
-        </RelativeLayout>
-
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:id="@+id/contact_group"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_list"
+            android:layout_below="@id/teamDetailsNameTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:padding="5dp">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <TextView
                 android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:paddingLeft="30dp"
-                android:paddingTop="20dp"
-                android:paddingRight="30dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/visit_website"
+                android:id="@+id/teamWebsiteTextView"
+                android:drawableStart="@drawable/ic_exit"
+                android:drawablePadding="4dp"
+                android:textColor="@color/myBrown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:autoLink="web"
+                android:layout_centerHorizontal="true"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/visit_website"
-                    android:id="@+id/teamWebsiteTextView"
-                    android:drawableLeft="@drawable/ic_exit"
-                    android:drawablePadding="4dp"
-                    android:textColor="@color/myBrown"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center" />
+            <TextView
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_503_223_1282"
+                android:id="@+id/teamPhoneTextView"
+                android:drawableStart="@drawable/ic_call"
+                android:drawablePadding="4dp"
+                android:textColor="@color/myBrown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_503_223_1282"
-                    android:id="@+id/teamPhoneTextView"
-                    android:drawableLeft="@drawable/ic_call"
-                    android:drawablePadding="4dp"
-                    android:textColor="@color/myBrown"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"/>
+            <TextView
+                android:layout_marginTop="90dp"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_123_sw_best_ever_ave_portland_oregon_97222"
+                android:drawableStart="@drawable/ic_map"
+                android:drawablePadding="4dp"
+                android:id="@+id/teamAddressTextView"
+                android:textColor="@color/myBrown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_123_sw_best_ever_ave_portland_oregon_97222"
-                    android:drawableLeft="@drawable/ic_map"
-                    android:drawablePadding="4dp"
-                    android:id="@+id/teamAddressTextView"
-                    android:textColor="@color/myBrown"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center_vertical"/>
+            <TextView
+                android:layout_marginTop="130dp"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sample_gmail_com"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="4dp"
+                android:id="@+id/teamEmailTextView"
+                android:textColor="@color/myBrown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:autoLink="email"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sample_gmail_com"
-                    android:drawableLeft="@drawable/ic_email"
-                    android:drawablePadding="4dp"
-                    android:id="@+id/teamEmailTextView"
-                    android:textColor="@color/myBrown"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center_vertical"/>
 
-            </LinearLayout>
         </RelativeLayout>
-    </LinearLayout>
-</FrameLayout>
+
+        <Button
+            android:layout_below="@id/contact_group"
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:height="50dp"
+            android:width="270dp"
+            android:padding="5dp"
+            android:text="@string/save_team"
+            android:layout_margin="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/colorTextIcons"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
