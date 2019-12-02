@@ -1,55 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:layout_width="match_parent"
+    android:layout_width="350dp"
+    android:layout_marginStart="5dp"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="2dp"
-    android:layout_marginEnd="2dp">
+    android:padding="5dp"
+    android:background="@drawable/round_list"
+    android:layout_marginBottom="5dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="150dp"
+        android:padding="5dp"
+        android:background="@drawable/round_list">
 
         <ImageView
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="10dp"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:id="@+id/teamImageView"
-            app:srcCompat="@drawable/university"
+            android:src="@drawable/university"
             android:scaleType="centerCrop"
             android:contentDescription="@string/team_logo" />
 
+        <ImageView
+            android:id="@+id/dragIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@id/teamImageView"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom|start"
+            android:src="@drawable/ic_reorder"
+            android:contentDescription="@string/drag_icon" />
+
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_marginStart="4dp"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
+        android:background="#ffffff"
         android:layout_height="match_parent"
-        android:background="@drawable/round_list">
+        android:padding="10dp">
 
         <TextView
-            android:layout_marginStart="10dp"
-            android:layout_centerVertical="true"
+            android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/teamNameTextView"
-            android:textSize="14sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:text="@string/team_name"
             android:textColor="@color/myBrown"/>
 
-        <ImageView
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="5dp"
-            android:id="@+id/info"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_more"
-            android:contentDescription="@string/info_icon" />
+    </LinearLayout>
 
-    </RelativeLayout>
 
 </LinearLayout>
