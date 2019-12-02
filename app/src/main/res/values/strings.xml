@@ -59,6 +59,7 @@
     <string name="serie_a_logo">serie a logo</string>
     <string name="save_team">Save Team</string>
     <string name="saved_teams">Saved Teams</string>
+    <string name="drag_icon">Drag Icon</string>
     `
 
 </resources>

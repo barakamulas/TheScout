@@ -1,4 +1,4 @@
-package com.baraka.thescout;
+package com.baraka.thescout.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,8 +8,12 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.baraka.thescout.Constants;
+import com.baraka.thescout.R;
 import com.baraka.thescout.models.Team;
 import com.baraka.thescout.ui.TeamDetailsActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +30,9 @@ public class FirebaseTeamViewHolder extends RecyclerView.ViewHolder implements V
     View mView;
     Context mContext;
 
+    public ImageView mTeamImageView;
+    public TextView mTeamNameTextView;
+
     public FirebaseTeamViewHolder (View itemView){
         super(itemView);
         mView = itemView;
@@ -35,18 +42,18 @@ public class FirebaseTeamViewHolder extends RecyclerView.ViewHolder implements V
 
 
     public void bindTeam(Team team) {
-        ImageView teamImageView = (ImageView) mView.findViewById(R.id.teamImageView);
-        TextView nameTextView = (TextView) mView.findViewById(R.id.teamNameTextView);
+        mTeamImageView = (ImageView) mView.findViewById(R.id.teamImageView);
+        mTeamNameTextView = (TextView) mView.findViewById(R.id.teamNameTextView);
         ImageView infoView = (ImageView) mView.findViewById(R.id.info);
-
-        Picasso.get().load(team.getCrestUrl()).error(R.drawable.university).into(teamImageView);
-
-        nameTextView.setText(team.getName());
+        Picasso.get().load(team.getCrestUrl()).error(R.drawable.university).into(mTeamImageView);
+        mTeamNameTextView.setText(team.getName());
     }
 
     @Override
     public void onClick(View view) {
         final ArrayList<Team> teams = new ArrayList<>();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_TEAMS);
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
 

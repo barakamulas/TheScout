@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:layout_marginEnd="2dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/teamImageView"
+            app:srcCompat="@drawable/university"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/team_logo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginStart="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_list">
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/teamNameTextView"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="@string/team_name"
+            android:textColor="@color/myBrown"/>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:id="@+id/info"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_more"
+            android:contentDescription="@string/info_icon" />
+
+    </RelativeLayout>
+
+</LinearLayout>
