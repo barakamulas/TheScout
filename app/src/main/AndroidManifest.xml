@@ -11,9 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".ui.SavedTeamsActivity"></activity>
-        <activity android:name=".ui.TeamDetailsActivity" />
-        <activity android:name=".ui.EplStatsActivity" />
+        <activity android:name=".ui.SavedTeamsActivity"
+            android:theme="@style/AppTheme.SlidrActivityTheme"/>
+        <activity android:name=".ui.TeamDetailsActivity"/>
+        <activity android:name=".ui.EplStatsActivity"
+            android:theme="@style/AppTheme.SlidrActivityTheme"/>
         <activity
             android:name=".ui.DashboardActivity"
             android:theme="@style/AppTheme.NoActionBar" />

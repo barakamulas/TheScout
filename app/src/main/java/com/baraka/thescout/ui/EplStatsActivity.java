@@ -10,6 +10,7 @@ import com.baraka.thescout.fragments.NavScorersFragment;
 import com.baraka.thescout.fragments.NavStandingsFragment;
 import com.baraka.thescout.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.r0adkll.slidr.Slidr;
 
 
 public class EplStatsActivity extends AppCompatActivity {
@@ -20,6 +21,8 @@ public class EplStatsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_epl_stats);
+
+        Slidr.attach(this);
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
 

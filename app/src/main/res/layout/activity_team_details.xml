@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.baraka.thescout.ui.TeamDetailsActivity">
+    tools:context="com.baraka.thescout.ui.TeamDetailsActivity"
+    android:background="@color/cardview_light_background">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"

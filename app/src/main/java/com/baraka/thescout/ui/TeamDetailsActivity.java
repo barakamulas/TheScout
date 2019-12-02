@@ -9,6 +9,7 @@ import android.os.Bundle;
 import com.baraka.thescout.R;
 import com.baraka.thescout.adapters.TeamPagerAdapter;
 import com.baraka.thescout.models.Team;
+import com.r0adkll.slidr.Slidr;
 
 import org.parceler.Parcels;
 
@@ -26,8 +27,13 @@ public class TeamDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_team_details);
         ButterKnife.bind(this);
+
+
+
 
         mTeams = Parcels.unwrap(getIntent().getParcelableExtra("teams"));
         int startingPosition = getIntent().getIntExtra("position", 0);

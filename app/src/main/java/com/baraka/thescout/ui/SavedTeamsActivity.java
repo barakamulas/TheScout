@@ -26,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.r0adkll.slidr.Slidr;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,9 +34,9 @@ import butterknife.ButterKnife;
 public class SavedTeamsActivity extends AppCompatActivity implements OnStartDragListener {
 
     private DatabaseReference mTeamReference;
-    private FirebaseTeamListAdapter mFirebaseAdapter;
+//    private FirebaseTeamListAdapter mFirebaseAdapter;
     private ItemTouchHelper mItemTouchHelper;
-//    private FirebaseRecyclerAdapter<Team, FirebaseTeamViewHolder> mFirebaseAdapter;
+    private FirebaseRecyclerAdapter<Team, FirebaseTeamViewHolder> mFirebaseAdapter;
 
     @BindView(R.id.savedRecyclerView) RecyclerView mRecyclerView;
     @BindView(R.id.teamTextView)TextView mTeamTextviewl;
@@ -44,6 +45,9 @@ public class SavedTeamsActivity extends AppCompatActivity implements OnStartDrag
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Slidr.attach(this);
+
         setContentView(R.layout.activity_saved_teams);
         ButterKnife.bind(this);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -52,53 +56,53 @@ public class SavedTeamsActivity extends AppCompatActivity implements OnStartDrag
         mTeamReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_TEAMS).child(uid);
 
 
-//        mTeamReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_TEAMS);
+        mTeamReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_TEAMS);
         setUpFirebaseAdapter();
     }
 
 
-    private void setUpFirebaseAdapter(){
-
-        FirebaseRecyclerOptions<Team> options =
-                new FirebaseRecyclerOptions.Builder<Team>()
-                        .setQuery(mTeamReference, Team.class)
-                        .build();
-
-        mFirebaseAdapter = new FirebaseTeamListAdapter(options, mTeamReference, this, this);
-
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setAdapter(mFirebaseAdapter);
-        mRecyclerView.setHasFixedSize(true);
-        ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(mFirebaseAdapter);
-        mItemTouchHelper = new ItemTouchHelper(callback);
-        mItemTouchHelper.attachToRecyclerView(mRecyclerView);
-    }
-
-
-
 //    private void setUpFirebaseAdapter(){
+//
 //        FirebaseRecyclerOptions<Team> options =
 //                new FirebaseRecyclerOptions.Builder<Team>()
 //                        .setQuery(mTeamReference, Team.class)
 //                        .build();
 //
-//        mFirebaseAdapter = new FirebaseRecyclerAdapter<Team, FirebaseTeamViewHolder>(options) {
-//            @Override
-//            protected void onBindViewHolder(@NonNull FirebaseTeamViewHolder firebaseTeamViewHolder, int position, @NonNull Team team) {
-//                firebaseTeamViewHolder.bindTeam(team);
-//            }
-//
-//            @NonNull
-//            @Override
-//            public FirebaseTeamViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.teams_list_item_drag, parent, false);
-//                return new FirebaseTeamViewHolder(view);
-//            }
-//        };
+//        mFirebaseAdapter = new FirebaseTeamListAdapter(options, mTeamReference, this, this);
 //
 //        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 //        mRecyclerView.setAdapter(mFirebaseAdapter);
+//        mRecyclerView.setHasFixedSize(true);
+//        ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(mFirebaseAdapter);
+//        mItemTouchHelper = new ItemTouchHelper(callback);
+//        mItemTouchHelper.attachToRecyclerView(mRecyclerView);
 //    }
+//
+
+
+    private void setUpFirebaseAdapter(){
+        FirebaseRecyclerOptions<Team> options =
+                new FirebaseRecyclerOptions.Builder<Team>()
+                        .setQuery(mTeamReference, Team.class)
+                        .build();
+
+        mFirebaseAdapter = new FirebaseRecyclerAdapter<Team, FirebaseTeamViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull FirebaseTeamViewHolder firebaseTeamViewHolder, int position, @NonNull Team team) {
+                firebaseTeamViewHolder.bindTeam(team);
+            }
+
+            @NonNull
+            @Override
+            public FirebaseTeamViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.teams_list_item_drag, parent, false);
+                return new FirebaseTeamViewHolder(view);
+            }
+        };
+
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setAdapter(mFirebaseAdapter);
+    }
 
     @Override
     protected void onStart() {
