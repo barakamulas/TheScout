@@ -122,6 +122,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             Intent intent = new Intent(LoginActivity.this,DashboardActivity.class);
                             startActivity(intent);
                             finish();
+                            Toast.makeText(LoginActivity.this, "Welcome",
+                                    Toast.LENGTH_SHORT).show();
                             Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
                         }
                         if (!task.isSuccessful()) {

@@ -101,8 +101,15 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         switch(v.getId()) {
             case R.id.playersBtn:
                 Intent myIntent = new Intent(DashboardActivity.this, EplStatsActivity.class); //Click Listener on a button on a Fragment
+                String apiChoice = "EPL";
+                myIntent.putExtra("EPL", apiChoice);
                 startActivity(myIntent);
                 break;
+            case R.id.seriaBtn:
+                Intent newIntent = new Intent(DashboardActivity.this, EplStatsActivity.class); //Click Listener on a button on a Fragment
+                String apiSelection = "SERIE A";
+                newIntent.putExtra("SERIE A", apiSelection);
+                startActivity(newIntent);
             case R.id.profile_pic:
                 Intent cameraIntent = new Intent();
                 cameraIntent.setAction(android.content.Intent.ACTION_VIEW);

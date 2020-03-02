@@ -1,6 +1,6 @@
 ### THE SCOUT
 
-An android app for scouting soccer players in Kenya
+An android app for scouting soccer players in various leagues. The app provides football stats in provided leagues to give insight on which players are performing well.
 
 ## Author
 
